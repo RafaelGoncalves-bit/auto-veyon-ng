@@ -11,7 +11,7 @@ wmic computersystem where name="%computername%" call rename name="master-win"
 
 veyon.exe /S
 
-set veyon-cli="C:\Program Files\Veyon\veyon-cli.exe"
+set veyon-cli="C:\Program Files\Veyon\veyon-wcli.exe"
 %veyon-cli% config import confs.json
 %veyon-cli% authkeys create lei
 %veyon-cli% authkeys export lei/public C:\xampp\htdocs\lei.pem
