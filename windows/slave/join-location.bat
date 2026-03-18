@@ -11,7 +11,7 @@ if %errorlevel% equ 2 goto finish
 
 :joinLocation
 curl "http://%masterPC%/lei.pem" -o "%temp%\lei.pem"
-set veyon-cli="C:\Program Files\Veyon\veyon-cli.exe"
+set veyon-cli="C:\Program Files\Veyon\veyon-wcli.exe"
 %veyon-cli% authkeys import lei/public %temp%\lei.pem
 python C:\Windows\join-location.py %masterPC%
 
